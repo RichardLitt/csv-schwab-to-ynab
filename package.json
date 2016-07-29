@@ -1,0 +1,31 @@
+{
+  "name": "ynab-convert-csv",
+  "version": "1.0.0",
+  "description": "A converter for Banking transaction CSV files to YNAB compatible ones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardLitt/ynab-convert-csv.git"
+  },
+  "keywords": [
+    "schwab",
+    "ynab",
+    "csv"
+  ],
+  "author": "Richard Littauer <richard.littauer@gmail.com> (http://burntfen.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RichardLitt/ynab-convert-csv/issues"
+  },
+  "homepage": "https://github.com/RichardLitt/ynab-convert-csv#readme",
+  "dependencies": {
+    "fast-csv": "^2.1.0",
+    "fs": "0.0.2",
+    "lodash": "^4.14.0",
+    "yargs": "^4.8.1"
+  }
+}

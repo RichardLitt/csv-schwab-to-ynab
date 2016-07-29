@@ -2,8 +2,6 @@
 
 > A converter for Banking transaction CSV files to YNAB format
 
-WIP.
-
 This tool lets you transform csvs from various banks into a format expected by YNAB. Currently accepted Schwab and TDBank only.
 
 ## Install

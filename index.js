@@ -3,6 +3,7 @@
 var csv = require('fast-csv')
 var fs = require('fs')
 var _ = require('lodash')
+var stripLines = require('stripLines')
 
 var argv = require('yargs')
   .usage('Usage: ynab-convert-csv--input=Transaction_Export.csv --output=Transaction_Export_CONVERTED.csv [--map=map.json]')
@@ -55,10 +56,13 @@ function mapPayee (description) {
 // TODO Remove first line and 'posted transactions lines' from schwab
 // TODO Add General Expenses mapping if ATM is in memo
 
+var input = fs.createReadStream(argv.input)
+
 if (argv.bank === 'schwab') {
+  stream = input.pipe(stripLines(3))
+
   csv
-    .fromPath(argv.input, {
-      headers: true,
+    .fromStream(stream, {
       trim: true
     })
     .transform((obj) => {
@@ -76,11 +80,10 @@ if (argv.bank === 'schwab') {
     }))
     .pipe(fs.createWriteStream(argv.output, {
       encoding: 'utf8'
-    })
-  )
+    }))
 } else if (argv.bank === 'td') {
   csv
-    .fromPath(argv.input, {
+    .fromPath(input, {
       headers: false,
       trim: true
     })

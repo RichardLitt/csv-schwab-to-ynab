@@ -9,6 +9,7 @@ var argv = require('yargs')
   .demand(['input'])
   .describe('output', `Optional output file - if not specified, will output as ${['input']}_CONVERTED.csv`)
   .describe('map', 'Optional Payee and Category mapping file')
+  .describe('bank', 'Bank to parse from: schwab or td.')
   .argv
 
 var map = (argv.map) ? JSON.parse(fs.readFileSync(argv.map, 'utf8')) : null

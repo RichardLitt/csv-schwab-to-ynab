@@ -10,7 +10,7 @@ This tool lets you transform csvs from various banks into a format expected by Y
 
 ## Usage
 
-    ynab-convert-csv --input=examples/schwab.csv --output=schwab_CONVERTED.csv [--map=map.json]
+    ynab-convert-csv --input=examples/schwab.csv --output=schwab_CONVERTED.csv [--map=map.json] --bank=schwab
 
 ## Mapping files
 

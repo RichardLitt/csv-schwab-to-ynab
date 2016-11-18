@@ -35,6 +35,10 @@ Examples speak louder than words, here's a sample `map.json`:
 
 If a map isn't found, the transformer falls back to using the description for both `payee` and `category`.
 
+## For Schwab
+
+For schwab, there's an extra line at the beginning of the file that currently needs to be manually deleted. Work is ongoing on the `feat/strip-schwab-lines` branch.
+
 ## Contribute
 
 Please do! I basically used the code from [this module for AIB](https://github.com/jasonmadigan/aib-to-ynab) by [@jasonmadigan](https://github.com/jasonmadigan), to whom I am very grateful. Happy to edit this or pass it along to others who are interested. Open an issue.

@@ -1,6 +1,6 @@
 {
   "name": "ynab-convert-csv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A converter for Banking transaction CSV files to YNAB compatible ones",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,9 @@
     "fs": "0.0.2",
     "lodash": "^4.14.0",
     "yargs": "^4.8.1"
-  }
+  },
+  "coordinates": [
+    45.5192126,
+    -73.5789267
+  ]
 }

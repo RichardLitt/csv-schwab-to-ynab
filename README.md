@@ -1,5 +1,7 @@
 # ynab-convert-csv
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/ynab-convert-csv.svg)](https://greenkeeper.io/)
+
 > A converter for Banking transaction CSV files to YNAB format
 
 This tool lets you transform csvs from various banks into a format expected by YNAB. Currently accepted Schwab and TDBank only.
